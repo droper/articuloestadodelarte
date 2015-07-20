@@ -1,0 +1,116 @@
+Diversos autores han tratado el problema de predecir la tendencia de los precios en el mercado bursátil. Para conseguirlo se han propuesto diversas hipótesis y teor\'ias.\\
+
+El autor sobre el que se basa el análisis fundamental es Benjamin Graham, quien en conjunto con David Dodd escribió dos libros, Security Analysys \cite{BenjaminGraham2009} que trata sobre el an\'alisis de estados financieros para encontrar el valor real de una empresa y El Inversor Inteligente \cite{Graham2007} donde expone estrategias de inversi\'on basadas en el an\'alisis de los fundamentos de las acciones.\\
+
+Otro autor importante fue John Burr Williams quien describió en La Teor\'ia de la Inversi\'on de Valor \cite{Williams1938}  el propósito central del mercado de valores como la búsqueda del valor intrínseco y fue el primero en sugerir que el valor actual neto de los flujos de efectivo futuros era la base para determinar el valor intrínseco tal como indica la ecuaci\'on \ref{Modelo flujos de efectivo} \cite{Kolb1993}:\\
+
+\begin{equation}
+\label{Modelo flujos de efectivo}
+V_a = \frac{D_1}{(1 + k)} + \frac{D_2}{(1 + k)^2} + \frac{D_3}{(1 + k)^3} + \frac{D_4}{(1 + k)^4} + …
+\end{equation}
+
+Donde:\\
+
+$V_a$ = valor actual de la acci\'on.\\
+
+$D_t$ = dividendo esperado a pagarse en el momento t.\\
+
+$k$ = tasa de descuento apropiada al riesgo de los dividendos esperados\\
+
+\subsection{Presentación de métodos}
+
+Para llevar a cabo la predicci\'on burs\'atil basada en el valor fundamental se han desarrollado diversas t\'ecnicas, las cuales tienen en com\'un entre si la utilizaci\'on de ratios basados en los estados financieros empresariales y estad\'istica macroecon\'omica.\\
+
+Los inversionistas basados en el an\'alisis fundamental han dividido las acciones en acciones de valor y acciones de crecimiento \cite{Piotroski2000} \cite{Preeti2009}, donde las primeras son aquellas acciones subvaloradas por el mercado y las segundas son las acciones cuyas utilidades el mercado espera crezcan r\'apidamente en el futuro.\\
+
+\subsubsection{Presentaci\'on de m\'etodos estad\'isticos}
+%\subsubsection{An\'alisis de acciones de valor}
+
+Sobre las acciones de valor se han realizado investigaciones utilizando estad\'istica para encontrar portafolios de acciones subvaloradas de acuerdo a indicadores financieros basados en el an\'alisis fundamental para pronosticar futuros cambios en las utilidades por acción.\\
+
+Shiller, en 1987 \cite{Shiller1987}, adoptó el concepto de “precio perfecto predecido” para calcular a posteriori el valor real del índice S\&P y compararlo con el precio observado, que es el valor actual de los flujos de efectivo esperados. Shiller se enfoca en el mercado en conjunto y encontró que la volatilidad del mercado no puede explicarse por cambios en los dividendos, tasas de interés real o de substitución.\\
+
+Ou y Penman \cite{Ou1989} en 1989, los pioneros de esta área, utilizan un modelo Logit que sumariza los ratios de contabilidad en un solo valor llamado Pr que es la probabilidad en un año de cambios en las ganancias. Examinan como los estados financieros pueden ser usados para predecir cambios en las ganancias en el plazo de un año. Luego definen dos portafolio basado en acciones que tiene Pr alto y otros Pr bajo. Sus datos demuestran que obtienen un retorno de 12.5\%  para dos años y el 66\% de sus predicciones son correctas. \\
+
+En 1989, Bernard, V. y J. Thomas \cite{Bernard1989} remarcaron los cambios en las cotizaciones producidas después de la publicación de los estados financieros.\\
+
+Fama y French \cite{Fama1992} en 1992 encuentran que dos ratios, porcentaje del mercado y valor en libros entre valor de mercado (Book to market o BM en inglés) captura mucho del comportamiento del promedio de ganancias de capital en las acciones. En \cite{Fama1995} de 1995 ambos autores confirman que un bajo “Book to market” (precios altos de la acción en el mercado con respecto a su valor en libros) es típico de empresas que se encuentran en crecimiento, mientras que altos Book-to-market son típicos de firmas relativamente estancadas.\\
+
+Los estudios de Greig y Stober \cite{Greig1992} en 1992, reexaminan el trabajo de Ou y Penman. Mientras que ganancias superiores se obtienen por el portafolio, no se considera que Pr tenga capacidades de predicción y se da como explicación que este valor indica retornos esperados y no retornos fuera de lo común asociados con los precios de las acciones desviándose de su valor fundamental.\\
+
+Holthausen y Larcker \cite{Holthausen1992} examinan la rentabilidad de una estrategia de mercado basada en el modelo Logit diseñado para predecir retornos sobre el mercado en base a 16 ratios contables.\\
+
+Lev yThiagarajan \cite{Lev1993} en 1993, introducen doce indicadores financieros utilizados por especialistas en security valuation y que reflejan las reglas tradicionales del análisis fundamental. Estos indicadores incluyen  información sobre cambios en los inventarios, cuentas por cobrar, capital, gastos en investigación, margenes,  gastos de ventas, tasas de impuestos, productividad, métodos de inventario y calificaciones en auditorías. \\
+
+Lakonishok, Shleifer y Vishny \cite{Lakonishok1994} en 1994, encuentran que la diferencia de retornos entre las empresas con altos ratios BM y las de bajo BM es resultado de una falla del mercado al poner precios. En particular, ratios BM altos reflejan acciones “dejadas de lado” donde pobres desempeños previos han llevado a expectativas muy pesimistas acera de su futuro rendimiento. Este pesimismo se acaba  al anunciarse las nuevas ganancias de la empresas \cite{LaPorta1996}.\\
+
+Huberts y Fuller \cite{Huberts1995} en 1995, mostraron que las firmas cuyos ingresos son menos predecibles tienen menor rendimiento a futuro.\\
+
+Sloan \cite{Sloan1996} en 1996 mostró que empresas con una alta proporción de ajustes contables en sus reportes de utilidades tienen bajos rendimientos en el futuro.\\
+
+En un estudio posterior, Abarbanell y Bushee \cite{Abarbanell1997} en 1997 presentan evidencia de dos premisas subyacentes del análisis fundamental, mostrando en primer lugar que muchos de los indicadores utilizados por Lev y Thiagarajan estan asociados con cambios en las utilidades. Y segundo, que el mercado no reacciona a tiempo a la información, concluyendo así que el ajuste de los precios al valor real no es necesariamente completo. \\
+
+En 1998 presentaron un nuevo paper \cite{Abarbanell1998} donde definen una estrategia de análisis basada en Lev y Thiagarajan \cite{Lev1993} para generar ganancias sobre el mercado, obteniendo utilidades en un periodo de doce meses.\\
+
+Pierce-Brown \cite{Pierce-Brown1998} en 1998 usa cinco ratios para predecir ganancias y tiene un porcentaje de aciertos del 69\%. \\
+
+En 1998 Frankel y Lee \cite{Frankel1998} presentan una estrategia donde los inversores compran acciones cuyos precios están detrás de sus fundamentos. La subvaluación es identificada utilizando la predicción de precios de los analistas y un modelo de valuación basado en los datos contables. La estrategia genera retornos positivos en un periodo de tres años.\\
+
+Setiono y Strong \cite{Setiono1998} en 1998 aplican la estrategia de Ou y Penman \cite{Ou1989} a data del Reino Unido en el periodo 1980 – 1992 y concluyen que un inversor hubiera ganado 17\% en un periodo de dos años.\\
+
+Al-Debie y Walker \cite{Al-Debie1999} en 1999, replican y extienden el trabajo de Lev y Thiagarajan \cite{Lev1993} con data del Reino Unido. Identifican tres indicadores (utilidad bruta, gastos de distribución/administración y ganancias por empleado) significativos. Al permitir que los parámetros varíen dependiendo de la industria la correlación sube.\\
+
+Piotroski \cite{Piotroski2000} el año 2000 provee evidencia que soporta la capacidad predictiva de indicadores contables con respecto a futuros ajustes de precio. Usando nueve indicadores relativos a las tres áreas de las condiciones financieras de una empresa: rentabilidad, estabilidad financiera, liquidez y eficiencia operativa, clasifica a las firmas en diez portafolios dependiendo de las implicaciones de los indicadores con respecto a futuros precios y rentabilidad. Sus resultados soportan la capacidad de la información contable de predecir el comportamiento futuro de una empresa y la demora del mercado en reconocer estos patrones predecibles.\\
+
+Ali y Hwang \cite{Ali2000} en el 2000 se enfocan en factores específicos de cada país y el efecto que tienen en la relevancia de los indicadores financieros. Se consideran: sistemas financieros bancarios y orientados al mercado, participación del sector privado en la fijación de estándares, modelo de los países (anglosajón o europeo continental), leyes de impuestos y gastos en servicios de auditoría.\\
+
+En el 2004, Bartov y Kim \cite{Bartov2004} demostraron que el efecto BM es más fuerte cuando se consideran las razones contables para un bajo ratio BM.\\
+
+En el 2005, Arnott \cite{Arnott2005} encontró que durante los 80 años anteriores, menos de un tercio de las 10 empresas más grandes por capitalización de mercado sobrepasaron el promedio de crecimiento del índice S\&P 500 en los siguientes 10 años. Es más, el crecimiento promedio de esa lista hubiera ganado 30\% menos que el S\&P 500.\\
+
+Skogsvik \cite{Skogsvik2008} investiga en el 2008 estados financieros de empresas suecas y como pueden ser usados para predecir cambios en en las ganancias de mediano plazo (tres años). Sus resultados muestran que el Retorno de Inversión es el mejor de los indicadores, superior a todos los demás combinados.\\
+
+En el artículo de Dichev y Tang \cite{Dichev2009} publicado el 2009, se investiga la relación entre volatilidad de las ganancias y la capacidad de predecir sus movimientos en el corto y largo plazo. Los autores concluyen que las empresas con ganancias poco volátiles son más comunes en los portafolios de largo plazo y más predecibles.\\
+
+En Túnez, Jaouida Elleuch \cite{Elleuch2009} examina en el 2009 una estrategia de inversión de análisis fundamental  basada en el uso de información contable, para predecir ganancias con las acciones separando perdedores de ganadores, utilizando ratios contables basados en el análisis fundamental. Basándose en Piotroski \cite{Piotroski2000} y Lev y Thiagarajan \cite{Lev1993} se escogen 12 indicadores  financieros seleccionados en base a su capacidad de predecir futuras ganancias. Los indicadores que utiliza son el incremento de inventario, el incremento en las cuentas por cobrar, el incremento de inversiones, el cambio en el margen de ventas, el incremento de la productividad por trabajador, el retorno del capital, la variación del retorno del capital, el flujo de caja, las adquisiciones de activos fijos, el apalancamiento financiero, la liquidez y el retorno de los activos.\\
+
+El 2012, Seng y Hancock \cite{DynaSeng2012}, usando data global de los años 1990 – 2000 e investigando factores de contexto que influyen en la predicción, extienden el cuerpo de conocimientos sobre el análisis fundamental. Los resultados indican que los indicadores fundamentales son predictores significativos de cambios en las ganancias a futuro. Factores contextuales como ganancias previas, sector industrial, condiciones macroeconómicas del país de origen son todas influencias demostradas en las ganancias.\\
+
+Seng y Hancock consideran nueve indicadores: variación del inventario, variación de las cuentas por cobrar, cambio en la utilidad bruta, cambio en los gastos administrativos (costos indirectos), inversiones de capital, cambios en los impuestos, productividad de los trabajadores además de dos indicadores cualitativos (la técnica para contabilizar el inventario usada y si están o no auditados los estados financieros).\\
+
+%Acciones de crecimiento
+
+Otras investigaciones han estudiado subconjuntos de las empresas de crecimiento, como empresas tecnológicas, empresas intensivas en Investigación y Desarrollo y empresas de internet.\\
+
+La Porta et al \cite{Lakonishok1994}  y Dechow, P. y R. Sloan \cite{Dechow1997} demostraron que el mercado se basa en análisis equivocados a largo plazo por lo que empresas con un BM bajo tienden a dar menores beneficios a futuro.\\
+
+Lev y Sougiannis \cite{Lev1996} en 1996, estudiaron la relevancia de la investigación y desarrollo (R\&D) y encontraron que empresas intensivas en R\&D obtuvieron ganancias por encima del mercado en periodos futuros.\\
+
+Pinches, Narayanan y Kelm \cite{Pinches1996} en 1996 establecieron que los proyectos de investigación y desarrollo evolucionan en tres fases diferentes. La de iniciación o innovación, la de progreso o continuación y la de resultado, que lleva a la comercialización de un nuevo producto o servicio.\\
+
+Demers y Lev \cite{Demers2000} en el 2000, examinaron la relevancia de la inversión en marketing y en desarrollo e investigación para valuar compañías de internet. Encontraron que ambas eran relevantes para la valuación.\\
+
+En el mismo año, Rajgopal, Kotha y Venkatachalan \cite{Rajgopal2000} consideraron el rol de la data no financiera para valuar compañías de internet examinando el impacto de la información contable y medidas del uso de internet. Hallaron además que el valor en libros y el margen bruto están positivamente relacionados a las acciones y que el tráfico web predice ventas en los siguientes dos semestres.\\
+
+Chan et al. \cite{Chan2001} en el 2001 confirmo el artículo de Rajgopal et. al \cite{Rajgopal2000} y encontró que los gastos en publicidad tienen el mismo efecto.\\
+
+Hand \cite{Hand2000} en el 2000 y Keating, Lys y Magee en \cite{Keating2001} el 2001 encontraron evidencia de que los datos contables eran relevantes para analizar las empresas de internet, pero no hallaron una relación clara.\\
+
+Penman y Zhang \cite{Penman2002} en el 2002 demostraron que el mercado de valores no comprende los gastos en R\&D y publicidad, lo que conduce a una subvaloración que produce retornos sobre el mercado en el futuro.\\
+
+Monhanram \cite{Mohanram2005} en el 2005 aplica indicadores fundamentales modificados a acciones de crecimiento y los resultados indican que son exitosos en diferenciar entre empresas que se van a desempeñar bien a futuro y las que no.\\
+
+En el 2009, Meena Sharma y Preeti \cite{Preeti2009} examinan si el análisis fundamental, en forma de dos conjuntos de indicadores: tradicionales y de crecimiento, puede identificar a los mejores resultados cuando es aplicado a un portafolio de crecimiento. Los indicadores fundamentales tradicionales  que indican rentabilidad, flujo de caja, eficiencia operativa y liquidez son aplicados a un conjunto de ejemplo para el artículo. Los indicadores de crecimiento relativos a las ganancias, crecimiento, investigación y desarrollo también son aplicados al conjunto de ejemplo. Los resultados indican que el análisis fundamental basado en indicadores de crecimiento es muy exitoso diferenciado entre las empresas que van desenvolverse bien en el futuro y las que no.\\
+
+
+\subsubsection{Presentaci\'on de m\'etodos de aprendizaje de m\'aquinas}
+
+Algunos investigadores han realizado estudios que utilizan los indicadores provenientes del análisis fundamental mediante algoritmos de aprendizaje de máquina.\\
+
+El 2009, Bruce J. Vanstone y Gavin Finnie \cite{Vanstone2009} esbozan una serie de pasos para crear redes neuronales orientadas a la inversión en los mercados de valores, utilizando el análisis fundamental o el análisis técnico y tomando en cuenta las principales restricciones a las que se verá sometida la red neuronal en el mundo real.\\
+
+El 2010, Bruce Vanstone, Gavin Finnie y Tobias Hahn \cite{Vanstone2010} se basan en el trabajo de Vanstone y Finnie del 2009 \cite{Vanstone2009} para crear redes neuronales orientadas al mercado de valores y utiliza las 4 variables fundamentales de Aby \textit{et ál.} \cite{Aby2001} para conseguir retornos sobre el promedio del mercado en Australia.\\
+
+El 2011, Kao-Yi Shen \cite{Shen2011} aplica el an\'alisis fundamental a la bolsa de Taiwan mediante una red neuronal artificial. Utiliza los indicadores de Piotroski \cite{Piotroski2000} para que la red neuronal aprenda a encontrar la relación entre los valores de los indicadores y el precio de la acción, identificando a las acciones subvaloradas por el mercado. El autor a su vez indica que hay realtivamente pocas investigaciones sobre la aplicaci\'on del an\'alisis fundamental utilizando algoritmos de aprendizaje de m\'aquinas.\\
+
+

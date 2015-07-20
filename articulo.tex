@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla del art\iculo sobre el estado del arte
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,10pt,twocolumn]{article}
+%\documentclass[a4paper,10pt,onecolumn]{article}
+
+%\textheight = 26cm
+%\textwidth  = 18cm
+%\topmargin  = -2cm
+%\oddsidemargin= -1cm
+%\parindent  = 0mm
+
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+% Esto es para que el LaTeX sepa que el texto está en español:
+\usepackage[spanish, english]{babel}
+\usepackage{abstract}
+
+% Paquetes de la AMS:
+\usepackage{amsthm,amsmath,amssymb,amsfonts,latexsym,cancel}
+
+\usepackage{graphicx}
+%\usepackage{multicol}
+
+\renewcommand{\refname}{Referencias Bibliográficas}
+\renewcommand{\baselinestretch}{1} %espacio entre lineas, 2 es doble espacio
+
+%--------------------------------------------------------------------------
+\title{Revisi\'on de	 modelos predictivos del valor real de las acciones en el mercado bursátil basados en el análisis fundamental}
+
+\author{Universidad Nacional de Ingeniería\\\\
+        Avenida Túpac Amaru 210, Lima\\\\
+        Pedro Muñoz del Rio\\
+        pmunoz@gmail.com
+}
+  
+\begin{document}
+
+\twocolumn[
+  \maketitle
+  
+  \selectlanguage{spanish}  
+  \begin{onecolabstract}
+El presente trabajo revisa los últimos avances en los modelos de inversi\'on basados en el an\'alisis fundamental como base para estimar el desempeño de las acciones en el mercado de valores. Los modelos buscan encontrar acciones subvaloradas por el mercado analizando la tendencia de las utilidades utilizando indicadores contables y financieros. Los modelos se orientan a diferentes segmentos del mercado bursátil como acciones de valor o de crecimiento, excluyendo alg\'un sector económico como los servicios seg\'un el modelo.\\
+
+\textbf{Palabras clave}: análisis fundamental, bolsa de valores, predicción, valuación, aprendizaje de m\'aquinas.\\
+
+  \end{onecolabstract}
+  
+\selectlanguage{english}  
+  \begin{onecolabstract}
+This work reviews the last advances in investment models that use fundamental analys to predict the behavior of stocks in the stock market. The models searchs for undervalued stocks, analyzing the utilities using accountant and financial rates and are oriented to different segments of the stock market like growth and value stocks, excluding some of then economical sectors like services.\\
+
+\textbf{Keywords}: fundamental analysis, stock market, prediction, valuation, machine learning.\\
+
+  \end{onecolabstract}
+]
+
+\section{Introducción}
+   \input{introduccion}
+
+\section{Revisión de Literatura}
+   \input{estado_arte_resumen_articulo}
+   \input{estado_arte_detalle_articulo_g}
+
+\section{Revisión de los modelos}
+   \input{aporte_articulo}
+
+\section{Conclusiones}
+   \input{conclusiones}
+
+% Bibliografía.
+%-----------------------------------------------------------------
+
+   \bibliographystyle{miestilo}
+   \bibliography{bibliografia_estado_arte}
+
+\end{document}

@@ -1,0 +1,283 @@
+\subsection{Predicci\'on en general}
+
+De los trabajos citados, se va a presentar con mayor detalle los modelos m\'as recientes.\\
+
+\subsubsection{Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers}
+
+En el año 2000 Joseph Piotroski publica un artículo \cite{Piotroski2000} en el cual propone un modelo con el cuál se eligen acciones de valor (acciones con un bajo multiplicador entre su valor de mercado y el valor en libros) pero sin tomar en cuenta a las que tengan fundamentos pobres, con lo que obtiene rendimientos superiores al mercado.\\
+
+En su modelo, Piotroski utiliza nueve indicadores que reflejan tres áreas de la condición financiera de una empresa: rentabilidad, liquidez y eficiencia operativa.\\
+
+Los nueve indicadores son:\\
+
+\textbf{Retorno sobre activos (ROA)}: El ratio resultado de dividir el ingreso neto antes de ingresos extraordinarios entre los activos. Si es positivo el indicador es 1, caso contrario 0.\\
+
+\textbf{Flujo de caja sobre activos}: El flujo de caja generado por el negocio en el periodo entre los activos. Si es positivo el indicador es 1, caso contrario 0.\\
+
+\textbf{Varianza retorno sobre activos}: Es el resultado de restar el Retorno sobre activos del periodo anterior del retorno sobre activos actual, si el resultado es positivo, el indicador es 1, caso contrario, es cero.\\
+
+\textbf{Ajustes}: Si las utilidades son mayores al flujo de caja debido a ajustes contables, los estados financieros están indicando una mala señal sobre la futura rentabilidad de la empresa. Este indicador se define como el resultado de restar el flujo de caja al ingreso neto. Si el flujo de caja es mayor al ingreso neto, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza deuda de largo plazo}: Es el cambio en el ratio de la deuda de largo plazo entre los activos. Si el ratio baja de un periodo a otro, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza de la liquidez}: Este indicador mide el cambio en la liquidez de la empresa. La liquidez es la división de los activos entre la deuda de corto plazo. Si la liquidez aumenta, es una buena noticia y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Oferta de acciones}: Si la empresa emite acciones, es indicador de que no genera caja suficiente para financiar las actividades de la empresa. Si la empresa no emitió acciones, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza del margen}: Es la variancia del margen, definido como las ganancias entre las ventas totales. Un incremento del margen indica aumento de la eficiencia, reducción de los costos de inventario o un aumento del precio del producto. Si la varianza de un periodo a otro es positiva, el indicador es 1, caso contrario es cero. \\
+
+\textbf{Varianza de la rotación de activos}: El ratio se define como las ventas totales entre los activos. Si aumenta el ratio, eso indica mayor productividad en la empresa. Si el ratio se incrementa en el tiempo, el indicador es 1, caso contrario es 0.
+
+Cada indicador es calificado de “bueno” o “malo” dependiendo de su impacto en la rentabilidad y precios futuros. La variable del indicador es uno si el indicador es bueno o cero en caso contrario. El agregado de todas las variables es F\_SCORE, la suma de los nueve indicadores binarios. Este indicador agregado está diseñado para medir la calidad de la posición financiera de una empresa.\\
+
+La estrategia de inversión propone comprar las acciones cuyo F\_SCORE sea alto y vender las que tengan un bajo resultado.\\
+
+El aporte de este art\'iculo fue la creación de un modelo sencillo para invertir a largo plazo basándose en los fundamentos de las empresas. Utilizando las variables propuestas por Piotroski se han escrito otros artículos como los de Mohanram \cite{Mohanram2005} y Elleuch \cite{Elleuch2009}, quienes en sus respectivos paises (India y Tunez) utilizaron con \'exito el modelo de Piotroski.\\
+
+\subsubsection{Separating Winners from Losers among Low Book-to-Market Stocks using Financial Statement Analysis}
+
+El autor, Partha S. Mohanram, se basa en Piotroski y su modelo de indicadores pero se enfoca en las acciones de crecimiento (acciones cuyo valor de mercado tiene un alto múltiplo con respecto al valor en libros) en el artículo \cite{Mohanram2005} publicado el 2005. \\
+
+Los indicadores utilizados por Mohanram se pueden dividir en tres: indicadores de rentabilidad y flujo de caja, de sobrevaloración en el mercado e indicadores de una contabilidad conservadora.\\
+
+Dependiendo de que cada indicador sea positivo o negativo, se suma 1 o 0 a la variable GSCORE, a mayor GSCORE es más probable que la empresa de buenos rendimientos.\\
+
+Los indicadores utilizados son:\\
+
+\textbf{Indicadores basados en ingresos y rentabilidad.}\\
+
+\textbf{Retorno sobre activos (ROA)}: El ratio resultado de dividir el ingreso neto antes de ingresos extraordinarios entre los activos. Se compara con el ROA de la industria, si es mayor el indicador G1 es 1, caso contrario 0.\\
+
+\textbf{Flujo de caja sobre activos }: El ratio resultado de dividir el flujo de caja entre los activos. Se compara con el flujo de caja sobre activos de la industria, si es mayor G2 es 1, caso contrario 0.\\
+
+\textbf{Ajustes}: Si las utilidades son mayores al flujo de caja debido a ajustes contables, los estados financieros están indicando una mala señal sobre la futura rentabilidad de la empresa. Este indicador se define como el resultado de restar el flujo de caja al ingreso neto. Si el flujo de caja es mayor al ingreso neto, G3 es 1, caso contrario es 0.\\
+
+\textbf{Indicadores relacionados a las expectativas del mercado.}\\
+
+\textbf{Estabilidad de las utilidades}: Si la variabilidad de las utilidades es mayor a la variabilidad de las utilidades en empresas de bajo BM y del mismo sector económico, entonces G4 es 1, caso contrario, G4 es 0.\\
+
+\textbf{Crecimiento de las ventas}: G5 es 1 si el porcentaje de crecimiento de las ventas es superior a las empresas de bajo BM en la misma industria, 0 en el caso contrario.\\
+
+\textbf{Indicadores relativos a una contabilidad conservadora.}\\
+
+\textbf{Inversión en R\&D}: G6 es 1 si el porcentaje de inversión de la empresa en R\&D es mayor al promedio de la industria y 0 en caso contrario.\\
+
+\textbf{Gastos de capital}: G7 es 1 si el porcentaje de inversión de la empresa en gastos de capital es mayor al promedio de la industria y 0 en caso contrario.\\
+
+\textbf{Inversión en publicidad}: G8 es 1 si el porcentaje de inversión de la empresa en publicidad es mayor al promedio de la industria y 0 en caso contrario.\\
+
+Luego de pruebas estadísticas, el modelo demuestra ser más útil en identificar acciones perdedoras que acciones ganadoras, permitiendo al gestor de una cartera deshacerse de las acciones que producen las mayores pérdidas.\\
+
+\subsubsection{Financial Statement Information, the Prediction of Book Return on Owners’ Equity and Market Efficiency: The Swedish Case}
+
+El propósito del autor, Stina Skogsvik en el artículo del 2008 \cite{Skogsvik2008}, es probar si la Bolsa de Valores Sueca es eficiente con respecto a la información financiera disponible, con un enfoque en el mediano plazo.\\
+
+El autor propone que utilizando solo el retorno sobre el capital (ROE) es posible hacer pronósticos más acertados sobre las futuras ganancias de una empresa que utilizando el ROE en conjunto con otros ratios.\\
+
+El valor de una empresa está determinada por el valor actual de utilidades futuras. De acuerdo con esta afirmación, la varianza del ROE indica si una empresa está disminuyendo o aumentando su valor debido a cambios en la cantidad de utilidades. Se considera para obtener la varianza un horizonte de tres años.\\
+
+Al utilizar solo un indicador de rentabilidad, el autor sesga su estudio para favorecer los ingresos en el mediano plazo, sin tomar en cuenta otros indicadores que pueden señalar gastos extraordinarios que conllevaran mayores ingresos a futuro, como la ampliación de capacidad instalada o inversiones en investigación y desarrollo.\\
+
+\subsubsection{Fundamental Analysis Strategy and the Prediction of Stock Returns}
+
+El autor, Jaouida Elleuch, examina en el 2009 \cite{Elleuch2009} una estrategia de inversión de análisis fundamental basada en el uso de información contable, para predecir ganancias con las acciones separando perdedores de ganadores, utilizando ratios contables basados en el análisis fundamental.\\
+
+El paper se basa especialmente en el modelo de Piotroski \cite{Piotroski2000}, escoge 12 indicadores financieros seleccionados en base a su capacidad de predecir futuras ganancias. A cada indicador se le asigna cero o uno dependiendo si es negativo o positivo.\\
+
+Los indicadores escogidos son:\\
+
+\textbf{Variación Inventario}: Ratio que mide el porcentaje de cambio de las ventas entre el porcentaje de cambio en el inventario. Un incremento mayor del inventario es una mala señal ya que sugiere dificultades en la venta de las existencias. Si el inventario decrece, es una buena señal y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Variaci\'on Cuentas por cobrar}: Este indicador representa el porcentaje de cambio de las ventas menos el porcentaje de cambio de las cuentas por cobrar, ambos medidos respecto al periodo anterior. Un aumento en las cuentas por cobrar respecto a las ventas representa posibles problemas en el flujo de caja. Si el resultado es positivo es una buena señal y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza Inversiones}: Este indicador mide el porcentaje de cambio en los gastos de capital entre el porcentaje de cambio en las ventas. La disminución es una mala señal que indica una gestión cortoplacista. Un valor positivo es una buena señal y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Utilidad Bruta}: Este indicador es el porcentaje de cambio en la utilidad bruta menos el el porcentaje de cambio en las ventas. Un decrecimiento de la utilidad bruta en relación a las ventas es mala señal. Como los estados financieros no necesariamente tienen ese dato, se puede utilizar el flujo de caja generado por la operación como sustituto. Un valor positivo es una buena señal y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Variaci\'n productividad por empleado}: Es el ratio definido por la variación de las ventas por empleado respecto al periodo anterior. Si aumenta es positivo y el indicador es 1, caso contrario vale 0.\\
+
+\textbf{Retorno sobre activos (ROA)}: El ratio resultado de dividir el ingreso neto antes de ingresos extraordinarios entre los activos. Si es positivo el indicador es 1, caso contrario 0.\\
+
+\textbf{Varianza retorno sobre activos}: Es el resultado de restar el retorno sobre activos del periodo anterior del retorno sobre activos actual, si el resultado es positivo, el indicador es 1, caso contrario, es cero.\\
+
+\textbf{Flujo de caja sobre activos}: El flujo de caja generado por el negocio en el periodo entre los activos, donde el flujo de caja es igual al ingreso neto menos los ajustes contables.
+
+Los ajustes contables son:\\
+
+Ajustes = (Ajustes a los Activos - ajustes a los activos líquidos) - ajustes a la deuda a corto plazo – Depreciaci\'on
+
+Si es positivo, el indicador es 1, caso contrario 0.\\
+
+\textbf{Ajustes}: Este indicador es definido como los ajustes entre los activos. Las empresas con  mayores ajustes tienen mayor probabilidad de disminuir sus ganancias y las que tienen menores ajustes tienen mayor probabilidad de incrementar sus ingresos. Si los ajustes son negativos, el indicador es 1, caso contrario vale 0.\\
+
+\textbf{Variaci\'on del apalancamiento}: Representa cambio en el ratio deuda de largo plazo entre activos. Se considera que un incremento es una buena señal y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza de la liquidez}: Este indicador mide el cambio en la liquidez de la empresa. La liquidez es la división de los activos entre la deuda de corto plazo. Si la liquidez aumenta, es una buena noticia y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Variaci\'on del Rotación de los activos}: Este indicador mide el cambio del ratio ventas totales entre activos totales respecto al periodo anterior. Un cambio positivo indica un aumento en la eficiencia de los activos y el indicador es 1, caso contrario es 0.\\
+
+Dados los indicadores se define una variable F\_Score que representa la suma de los valores binarios definidos para los doce indicadores. Un F\_Score mayor representa mayores  probabilidades de obtener utilidades en una empresa.\\
+
+En las pruebas estadísticas realizadas, se demuestra que algunos indicadores tienen correlación negativa con el desempeño de la acción. Los indicadores Inversiones, apalancamiento (deuda de largo plazo) y las adquisiciones de activos fijos son presentados de forma negativa. Otros indicadores en cambio si consiguen altas correlaciones como el cambio en cuentas por cobrar, productividad de la fuerza de trabajo y retorno de los activos.\\
+
+\subsubsection{Prediction of stock returns for growth firms - a fundamental analysis}
+
+Los autores, Meena Sharma y Preeti en el 2009 \cite{Preeti2009}, examinan si el análisis fundamental, en forma de dos conjuntos de indicadores: tradicionales y de crecimiento, puede identificar a los mejores resultados cuando es aplicado a un portafolio de empresas con alto ratio PER.\\
+
+El autor crítica que no se le de mayor importancia al crecimiento de una empresa en papers anteriores, debido a que las ganancias no se obtienen solo comprando valores cotizados bajo su valor intrínseco sino eligiendo empresas cuyo crecimiento va a superar al del mercado y por ende sus utilidades van a experimentar un rápido aumento.\\
+
+La data es obtenida de La Bolsa de Valores de la India, entre los años 1998 y 2007. Las empresas de servicios no se toman en cuenta porque los ratios utilizados son intensivos en capital y debido a las conservadoras reglas contables, los activos intangibles son ignorados en los libros.\\
+
+Los inversores dividen las acciones en dos tipos: de valor y crecimiento. Los inversores por valor buscan las acciones que se coticen a menos de su valor intrínseco, en cambio, los inversores de crecimiento buscan acciones de empresas cuyas perspectivas indican un rápido crecimiento.\\
+
+Los ratios tradicionales considerados miden cuatro aspectos: rentabilidad, flujo de caja de la operación, eficiencia de la operación, liquidez y capacidad de generar caja, divididos en nueve indicadores.\\
+
+Los indicadores tradicionales son:\\
+
+\textbf{Retorno sobre activos relativo (ROA-R)}: Si el retorno sobre activos, resultado de dividir el ingreso neto entre los activos, es superior al ROA promedio de la industria el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza retorno sobre activos (V-ROA)}: Si el ROA del presente año es mayor al ROA del año pasado entonces el indicador es 1, caso contrario es 0.\\
+
+\textbf{Flujo de caja sobre activo (FC-ROA)}: Si el FC-ROA es superior al promedio de la industria el indicador es 1, caso contrario es 0.\\
+
+\textbf{Flujo de caja sobre ingresos}: Si el flujo de caja es mayor al ingreso neto entonces no se han alterado las cifras y el indicador es 1, caso contrario se han hecho ajustes a los ingresos y el indicador es 0.\\
+
+\textbf{Variacion del margen}: Si el margen, definido como los ingresos netos sobre las ventas totales, es mayor al margen del año anterior, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza de la rotación de activos}: El ratio se define como las ventas totales entre los activos. Si aumenta el ratio, eso indica mayor productividad en la empresa. Si el ratio se incrementa en el tiempo, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Apalancamiento}: Si el ratio de apalancamiento, definido como la deuda a largo plazo entre el capital, disminuye respecto al año anterior se considera buena señal y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Varianza de la liquidez}: Este indicador mide el cambio en la liquidez de la empresa. La liquidez es la división de los activos entre la deuda de corto plazo. Si la liquidez aumenta, es una buena noticia y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Emisión de valores}: si una empresa emite valores, eso significa que no está en capacidad de financiar sus operaciones por lo que si no hay emisión el indicador es 1, caso contrario es 0.\\
+
+Los ratios orientados a medir el potencial de crecimiento miden cuatro aspectos, divididos en seis indicadores: volatilidad de las utilidades, estabilidad del crecimiento y gastos en investigación y desarrollo, capital y marketing.\\
+
+Los indicadores son:\\
+
+\textbf{Volatilidad de las utilidades}: Se calcula midiendo la varianza de las utilidades de una empresa en los tres últimos años, luego se compara con otras empresas de crecimiento de la misma industria y si es menor que el promedio entonces el indicador es 1, caso contrario es 0.\\
+
+\textbf{Estabilidad del crecimiento}: La volatilidad del crecimiento de las ventas es medida calculando la varianza del crecimiento de las ventas de la empresa en los últimos tres años. Si la volatilidad del crecimiento de ventas de la empresa es menor a otras empresas de crecimiento en la misma industria, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Crecimiento de las utilidades}: Si el crecimiento de las utilidades es superior al crecimiento de las ventas indica que mejora la eficiencia de la empresa y el indicador es 1, caso contrario es 0.\\
+
+\textbf{Inversión en Investigación y desarrollo}: La investigación y desarrollo disminuyen las utilidades presentes pero las pueden aumentar a futuro, por lo que si el gasto en I\&D es superior a la media en las empresas de crecimiento del mismo sector, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Inversiones de capital}: La inversión en infraestructura, maquinaria y otras inversiones de capital  disminuyen las utilidades presentes pero las pueden aumentar a futuro, por lo que si el gasto en Inversiones de capital es superior a la media en las empresas de crecimiento del mismo sector, el indicador es 1, caso contrario es 0.\\
+
+\textbf{Inversión en publ}: La inversión en publicidad disminuye las utilidades presentes pero las pueden aumentar a futuro, por lo que si el gasto en publicidad es superior a la media en las empresas de crecimiento del mismo sector, el indicador es 1, caso contrario es 0.\\
+
+Los resultados obtenidos a base de pruebas estadísticas indican que el análisis fundamental basado en indicadores de crecimiento es muy exitoso diferenciando entre las empresas que van desenvolverse bien en el futuro y las que no.\\
+
+\subsubsection{Fundamental Analysis and the Prediction of Earnings}
+
+Los autores, Dyna Seng y Jason R. Hancock en el 2012 \cite{DynaSeng2012}, busca llevar el análisis fundamental más allá de los límites espacio temporales de estudios anteriores. El autor critica que trabajos previos no dan suficiente importancia al contexto macroeconómico del país donde se ubican las empresas estudiadas.\\
+
+La hipótesis de los autores es que los indicadores fundamentales proporcionan información para predecir futuros cambios en las ganancias en el corto y largo plazo. Los indicadores contextuales, condiciones macroeconómicas, a su vez influyen en la capacidad de los indicadores fundamentales de predecir ganancias a futuro.\\
+
+Para el an\'alisis fundamental se toman en cuenta los nueve indicadores propuestos por Abarbanell y Bushee \cite{Abarbanell1998} y se ejecutan tests  para comprobar si los indicadores pueden tener influencia en las futuras ganancias y si las variables del contexto macroeconómico y de la industria afectan a los indicadores.\\
+
+Los indicadores fundamentales utilizados son:\\
+
+\begin{itemize}
+
+\item \textbf{Inventario}: Este indicador se define como el resultado de restar la variación porcentual de las ventas a la variación porcentual del inventario, ambos con respecto al año anterior.
+
+\item \textbf{Cuentas por cobrar}: Este indicador se define como el resultado de restar la variación porcentual de las ventas a la variación porcentual en la cantidad de cuentas por cobrar, ambas con respecto al año anterior.
+
+\item \textbf{Ingresos brutos}: Este indicador se define como el resultado de restar el porcentaje de variación en en el margen (utilidad bruta entre ventas) al porcentaje de variación de las ventas.
+
+\item \textbf{Gastos de ventas y administrativos}: Este indicador se define como el resultado de restar la variación porcentual de las ventas a la variación porcentual de los gastos de ventas y administrativos.
+
+\item \textbf{Inversiones de capital}: Este indicador se define como el resultado de restar la variación porcentual de las inversiones de capital en la empresa a el promedio de la variación porcentual en las inversiones de capital de la industria.
+
+\item \textbf{Tasa de impuestos}: Este indicador se define como el porcentaje de los impuestos respecto al ingreso neto.
+
+\item \textbf{Fuerza de trabajo}: Este indicador se define como la variación porcentual de la eficiencia en el trabajo respecto al año anterior. El ratio de eficiencia se obtiene dividiendo las ventas entre el número de empleados.
+
+\item \textbf{Calidad de los ingresos}: Si se usa LIFO para el inventario el indicador es 0, 1 si es otro.
+
+\item \textbf{Calificación del auditor}: Si el auditor no está calificado el indicador es 0, caso contrario es 1.
+\end{itemize}
+
+
+Los indicadores contextuales son:\\
+
+\begin{itemize}
+
+\item \textbf{Anuncios de ganancias}: Este factor se divide en buenas y malas noticias.
+
+\item \textbf{Industria}: Manufactura, servicios, recursos naturales y comercio.
+
+\item \textbf{Inflación}: Se considera inflación alta o baja.
+
+\item \textbf{Crecimiento del PBI}: Se considera crecimiento alto o bajo.
+
+\item \textbf{País de origen}: Se considera en EEUU o fuera de los Estados Unidos.
+
+\end{itemize}
+
+Los resultados obtenidos avalan la influencia de los indicadores fundamentales sobre las futuras ganancias, aunque en el corto plazo (un año) su confiabilidad es bastante mayor que en el largo plazo (cinco años).\\
+
+\subsubsection{Identifying Expectation Errors in Value/Glamour Strategies: A Fundamental Analysis Approach}
+
+Los autores, Joseph D. Piotroski y Eric C. So en el 2012 \cite{Piotroski2012}, critican la hipótesis de que las mayores ganancias se obtienen aceptando riesgos mayores. La hipótesis que postulan y demuestran en el paper es que las ganancias se obtienen tomando ventaja sobre las fallas del mercado.\\
+
+Los autores proponen una clasificación de las acciones en nueve cuadrantes determinados por dos indicadores: FSCORE (obtenido de \cite{Piotroski2000}) y el ratio Book to Market, el cual se obtiene dividiendo el valor de las acciones en libros entre en el valor de mercado. Esta clasificación se realiza para descubrir que acciones son las más rentables. Luego de obtener ambos datos sobre las acciones, se clasifican en una matriz dividida en Alto, medio y bajo por cada uno, lo cual genera 9 secciones.\\
+
+Una vez realizada la clasificación se llevan a cabo pruebas estadísticas para determinar en cual sector se obtienen mayores ganancias y comprobar si las hipótesis establecidas son correctas.\\
+
+
+\subsubsection{An empirical methodology for developing stockmarket trading systems}
+
+El 2009, Bruce J. Vanstone y Gavin Finnie \cite{Vanstone2009} esbozan una serie de pasos para crear redes neuronales orientadas a la inversión en los mercados de valores, utilizando el análisis fundamental o el análisis técnico y tomando en cuenta las principales restricciones a las que se verá sometida la red neuronal en el mundo real.\\
+
+Los pasos para crear una red neuronal de predicción bursátil según los autores son:
+
+\begin{itemize}
+\item Elegir las variables adecuadas, ya sean indicadores fundamentales o de análisis técnico. Si el horizonte de tiempo es mediano o largo plazo (meses o años) se escogen los indicadores fundamentales y si es de corto plazo (días) se utiliza el análisis técnico. Se aconseja que se escojan indicadores avalados por estudios publicados.
+
+\item Escoger las salidas de la red neuronal. Se recomienda sea solo una salida para impedir que diferentes salidas se obstruyan entre si al colocar los pesos en posiciones diferentes durante el entrenamiento.
+
+\item Dividir la data disponible en data de entrenamiento y data de prueba. Se recomienda que la data se divida en un determinado punto del tiempo, de tal manera que los datos de toda acción queden divididos en data de entrenamiento y data de prueba. Esta distribución se debe a que los cambios en el tiempo afectan a todas las acciones, por lo que lo contrario implicaría conocer el futuro de un porcentaje de las acciones afectando el realismo de la predicción para las acciones de prueba. Se recomienda que los datos de entrenamiento sean un 80\% del total y se tenga por lo menos 10 años de datos para cada acción. Se debe incluir los datos de acciones que han salido de la bolsa para que la red neuronal se alimente de hechos reales.
+
+\item Definir una función que sirva para evaluar la calidad de la salida de la red neuronal. En caso de inversión de largo plazo, se propone la siguiente fórmula:
+
+$FilterSelectivity =(ClosedTrades *100)/TotalTrades$
+
+Donde ClosedTrades es la cantidad de transacciones exitosas al alcanzar el porcentaje esperado de ganancia y TotalTrades es el total de transacciones realizadas.
+
+\item Determinar la arquitectura de la red neuronal, para lo cual existen diversos enfoques que se recomienda investigar pero el artículo no elige uno sobre los demás.
+
+\item Definir indicadores que señalen cuando se debe comprar y cuando vender.
+
+\item Establecer límites mínimos de precio de las acciones. Si las acciones bajan de un límite mínimo, la red debe indicar que se venda.
+
+\item Introducir restricciones del mundo real como las comisiones por operación, los impuestos, el capital disponible, la cantidad de acciones en venta, etc.
+\end{itemize}
+
+\subsubsection{Stockmarket trading using fundamental variables and neural networks}
+
+El 2010, Bruce Vanstone, Gavin Finnie y Tobias Hahn \cite{Vanstone2010} se basan en \cite{Vanstone2009} para para crear redes neuronales orientadas al mercado de valores y utiliza las 4 variables fundamentales de Aby et al. \cite{Aby2001} para conseguir retornos sobre el promedio del mercado en Australia.\\
+
+Para elaborar la red neuronal se emplea data de la Bolsa de Valores de Australia (ASX200) desde 1994 al 2003 como entrenamiento y del 2004 al 2008 como prueba. En los datos de entrenamiento se incluyeron acciones que habían salido de la bolsa pero no se tomaron en cuenta para las pruebas.\\
+
+Los valores que se escapaban de lo normal (bajo el 2.5\% o sobre el 97.5\% de la data) fueron eliminados de las series de datos para evitar problemas en el aprendizaje de la red neuronal. Las variables cuyos extremos fueron removidos son el ratio precio entre utilidades, retorno sobre el capital y porcentaje de pago de dividendos.\\
+
+La red neuronal fue diseñada para producir una salida proporcional a los retornos esperados en el plazo de un año. El rango de la señal va de 1 a 100.\\
+
+
+\subsubsection{Implementing Value Investing Strategy by Artificial Neural Network}
+
+El 2011, Kao-Yi Shen \cite{Shen2011} aplica el an\'alisis fundamental a la bolsa de Taiwan mediante una red neuronal artificial. Utiliza los indicadores de Piotroski \cite{Piotroski2000} para que la red neuronal aprenda a encontrar la relación entre los valores de los indicadores y el precio de la acción, identificando a las acciones subvaloradas por el mercado. El autor a su vez indica que hay realtivamente pocas investigaciones sobre la aplicaci\'on del an\'alisis fundamental utilizando algoritmos de aprendizaje de m\'aquinas.\\
+
+La muestra utilizada en el artículo son las 400 compañias con la mayor relación entre su valor en libros y su valor de mercado (acciones de valor) sobre un total de 1200 empresas listadas en la bolsa de Taiwan a finales de Abril del 2009, por lo que los datos utilizados son del 2008. El tiempo de tenencia de las acciones, de 12 y 18 meses, es examinado para representar la salida de la red neuronal. Un cuarto de las acciones escogidas fue seleccionado al azar para servir de testeo. Para medir la variación se utilizo data del 2007.\\
+
+El autor propone utilizar el modelo F-Score de Piotroski \cite{Piotroski2000}, reemplazando el indicador Activos Intangibles (Accruals) por Retorno del capital (ROE), mediante una red neuronal que aprenda de los valores periódicos de los indicadores y sea capaz de predecir hacia adelante.\\
+
+El valor R es calculado dibujando la regresión lineal que mejor encaje entre las salidas de la red y sus metas, un indicador de la relación entre entradas y salidas. A más cercano a 1 sea, implica que la red neuronal genera mejores predicciones.\\
+
+La red neuronal consta de tres capas: entrada, oculta y salida. Luego de varias pruebas, el modelo de red neuronal que empleaba el algoritmo de Levenberg-Marquardt con un ratio de aprendizaje de 0.3 fue hallado como apropiado para la estructura de la red. En el estudio se encuentra que a más información histórica, mayor porcentaje de aciertos obtiene la red neuronal.\\
+
+Una vez configurada la red, utilizan las 100 empresas que dejaron para pruebas para que la red neuronal genere 100 salidas (los tiempos de tenencia de 12 meses). Las salidas se ordenan de mayor a menor, representando la predicción de la red neuronal para los próximos 12 meses. El 30\% superior (las top 30) se comparó con los stocks disponibles en el mercado y se halló que la ganancia de 78.44\% era muy superior al mercado.\\

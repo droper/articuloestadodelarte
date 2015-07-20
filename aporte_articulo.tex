@@ -1,0 +1,41 @@
+El an\'alisis fundamental ha servido como base para la elaboraci\'on de modelos que identifican acciones cuyo precio va a incrementarse en el mediano plazo. Existen dos tipos de acciones consideradas por el an\'alisis fundamental: acciones de valor y acciones de crecimiento, donde las primeras son las acciones de las empresas que a juicio del inversor han sido subvaloradas por el mercado y la segundas corresponden a las empresas a las que el mercado atribuye altas tasas de crecimiento en el futuro y por las que paga elevados múltiplos respecto a su valor en libros.\\
+
+\subsection{Modelos basados en indicadores}
+
+Los modelos basados en indicadores utilizan los estados financieros para encontrar ratios que sirven para poder clasificar las empresas de acuerdo a sus posibilidades de aumentar su precio en el futuro. La calificación se realiza utilizando estad\'istica, eligiendo en un punto del pasado de acuerdo a los indicadores una cartera de acciones y luego evaluando su desempeño en un periodo de tiempo, generalmente de uno a cinco años.\\
+
+Los modelos se dividen en tres tipos:\\
+
+\subsubsection{Modelos orientados a acciones de valor}
+
+Los modelos propuestos por Piotroski \cite{Piotroski2000}, Elleuch \cite{Elleuch2009}, Dyna Seng y Jason R. Hancock \cite{DynaSeng2012} entre otros emplean una estrategia de valor, la cual consiste en escoger acciones subvaloradas por el mercado para esperar a que el mercado reconozca su valor real y realizar las ganancias obtenidas.\\
+
+Para hallar las acciones subvaloradas, se escogen las que cotizan con un bajo múltiplo entre el precio de mercado y el valor real. Se analizan los fundamentos de las empresas para obtener su valor real y decidir las operaciones a realizar en funci\'on de ese valor comparado con el precio de mercado.\\
+
+Para predecir el comportamiento futuro de la empresa, se escoge un conjunto de indicadores financieros. A cada indicador se le asigna una variable la cual es 1 o 0 dependiendo si el c\'alculo del indicador arroja un resultado positivo o negativo para el futuro de las utilidades. Una vez obtenidas todas las variables, se suman, y el valor obtenido es la calificaci\'on de la acci\'on, a mayor calificaci\'on mayores son las probabilidades de que la acci\'on obtenga resultados positivos.\\
+
+Las variables más utilizadas por las investigaciones orientadas a las acciones de valor son la variación del retorno de los activos, seguida por retorno de la inversión, varianza del inventario, cuentas por cobrar, fuerza de trabajo en relación a las ventas, la varianza del margen bruto menos la varianza ventas, la varianza en el margen bruto y la variación de la deuda de corto y largo plazo.\\
+
+La estrategia por valor es rentable debido a que obtiene ganancias a partir de los errores del mercado en valorar las acciones, adquiriendo acciones subvaloradas y esperando a que recuperen su valor para venderlas.\\
+
+\subsubsection{Modelos orientados a acciones de crecimiento}
+	
+Los modelos de Mohanram \cite{Mohanram2005} y Meena Sharma y Preeti \cite{Preeti2009} emplean una estrategia de crecimiento, por la cual escogen empresas cuyas perspectivas de crecimiento son consideradas elevadas por el mercado con el objetivo de obtener altas tasas de retorno.\\
+
+Las empresas de crecimiento tienen precios de mercado con m\'ultiplos elevados respecto a su valor real. Para procurar diferenciar entre las empresas de crecimiento que si van a obtener rendimientos superiores a la media y las que van tener rendimientos pobres o incluso van a disminuir su valor, se analizan los fundamentos de la empresa con el fin de encontrar su valor real.\\
+
+Para predecir si la empresa va a tener resultados positivos o no, se escogen indicadores financieros orientados a la estabilidad econ\'omica e indicadores que indiquen el potencial de crecimiento. Definidos los indicadores, a cada uno se le asigna una variable que puede ser 1 o 0 dependiendo si el cálculo del indicador arroj aun resultado positivo o negativo para el futuro de las utilidades. Obtenidas todas las variables, se suman y el resultado es la calificación de la acción, a mayor valor, mayor es la probabilidad de obtener retornos positivos.\\
+
+Las variables más utilizadas por los modelos orientados a las acciones de crecimiento son las inversiones de capital comparadas con el sector,  la inversión en Investigación y desarrollo comparada con el sector y la inversión en marketing comparada con el sector así como la estabilidad del crecimiento.\\
+
+Las pruebas estadísticas muestran que las acciones de crecimiento no obtienen en promedio retornos superiores al mercado. Las altas expectativas conducen a precios altos de la acción, por lo que necesitan tasas de crecimiento muy elevadas de la empresas para superar el precio de la acción.\\
+
+Los modelos orientados a las acciones de crecimiento son más eficientes prediciendo las acciones que van a tener bajos rendimientos que las acciones cuyos rendimientos serán positivos.\\
+
+\subsubsection{An\'alisis fundamental implementado mediante algoritmos de aprendizaje de m\'aquina}
+
+Para llevar a cabo el an\'alisis de una acci\'on, los inversores tradicionalmente se han basado en los estados financieros tal como enseña Benjamin Graham en el libro Security Analysis \cite{BenjaminGraham2009}, pero modernas investigaciones han aplicado algor\'itmos de aprendizaje de m\'aquinas (machine learning) al an\'alisis fundamental para invertir en el mercado de valores.\\
+
+Los modelos basados en el an\'alisis fundamental que utilizan algoritmos de aprendizaje de m\'aquinas se basan en modelos previos como el de Piotroski \cite{Piotroski2000} o Aby et. al \cite{Aby2001} para definir las variables de entrada. La variable de salida es un n\'umero en un rango que indica la tendencia a subir de precio de una acci\'on determinada y la m\'etrica m\'as utilizada es el aumento del valor de la cartera en un periodo de tiempo, por lo general un año.\\
+
+Las inversiones realizadas utilizando aprendizaje de m\'aquinas y an\'alisis fundamental han obtenido resultados mixtos seg\'un las investigaciones analizadas, por lo que a\'un no hay un consenso sobre su grado de efectividad.\\
